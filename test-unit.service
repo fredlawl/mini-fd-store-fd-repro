@@ -1,0 +1,13 @@
+[Unit]
+Description=Experimental service
+
+[Service]
+Type=notify
+FileDescriptorStoreMax=1024
+Restart=always
+NotifyAccess=all
+ExecStartPre=/opt/tests/do_test.py setup 30
+ExecStart=/opt/tests/do_test.py start
+
+[Install]
+WantedBy=multi-user.target
