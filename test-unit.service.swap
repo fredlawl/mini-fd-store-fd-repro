@@ -1,0 +1,8 @@
+[Unit]
+Description=Experimental service
+
+[Service]
+ExecStart=/opt/tests/do_test.py swap
+
+[Install]
+WantedBy=multi-user.target
